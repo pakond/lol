@@ -1,0 +1,12 @@
+data:title *OK*
+skins:name *OK*
+data:lore *OK*
+data:blurb *OK*
+data:allytips *OK*
+data:enemytips *OK*
+data:partytype *OK*
+data:spells:name
+data:spells:description
+data:spells:tooltip
+data:spells:costType
+data:spells:resource

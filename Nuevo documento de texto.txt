@@ -1,0 +1,45 @@
+ParseError {#296
+  #message: "syntax error, unexpected token "as""
+  #code: 0
+  #file: "C:\newproject\src\Controller\ChampionController.php"
+  #line: 204
+  trace: {
+    C:\newproject\src\Controller\ChampionController.php:204 {
+      Composer\Autoload\includeFile($file)^
+      ›
+      › $this->respuesta['data'] as $value
+      ›
+    }
+    C:\newproject\vendor\composer\ClassLoader.php:346 { …}
+    C:\newproject\vendor\symfony\error-handler\DebugClassLoader.php:353 { …}
+    Symfony\Component\ErrorHandler\DebugClassLoader->loadClass() {}
+    C:\newproject\vendor\symfony\config\Resource\ClassExistenceResource.php:81 { …}
+    C:\newproject\vendor\symfony\dependency-injection\ContainerBuilder.php:355 { …}
+    C:\newproject\vendor\symfony\dependency-injection\Loader\FileLoader.php:215 { …}
+    C:\newproject\vendor\symfony\dependency-injection\Loader\FileLoader.php:103 { …}
+    C:\newproject\vendor\symfony\dependency-injection\Loader\YamlFileLoader.php:698 { …}
+    C:\newproject\vendor\symfony\dependency-injection\Loader\YamlFileLoader.php:255 { …}
+    C:\newproject\vendor\symfony\dependency-injection\Loader\YamlFileLoader.php:175 { …}
+    C:\newproject\vendor\symfony\dependency-injection\Loader\YamlFileLoader.php:133 { …}
+    C:\newproject\vendor\symfony\config\Loader\FileLoader.php:159 { …}
+    C:\newproject\vendor\symfony\config\Loader\FileLoader.php:98 { …}
+    C:\newproject\vendor\symfony\dependency-injection\Loader\FileLoader.php:66 { …}
+    C:\newproject\vendor\symfony\dependency-injection\Loader\Configurator\ContainerConfigurator.php:64 { …}
+    C:\newproject\src\Kernel.php:20 { …}
+    C:\newproject\vendor\symfony\framework-bundle\Kernel\MicroKernelTrait.php:155 { …}
+    C:\newproject\vendor\symfony\dependency-injection\Loader\ClosureLoader.php:39 { …}
+    C:\newproject\vendor\symfony\config\Loader\DelegatingLoader.php:40 { …}
+    C:\newproject\vendor\symfony\framework-bundle\Kernel\MicroKernelTrait.php:163 { …}
+    C:\newproject\vendor\symfony\http-kernel\Kernel.php:648 { …}
+    C:\newproject\vendor\symfony\http-kernel\Kernel.php:544 { …}
+    C:\newproject\vendor\symfony\http-kernel\Kernel.php:786 { …}
+    C:\newproject\vendor\symfony\http-kernel\Kernel.php:125 { …}
+    C:\newproject\vendor\symfony\framework-bundle\Console\Application.php:168 { …}
+    C:\newproject\vendor\symfony\framework-bundle\Console\Application.php:74 { …}
+    C:\newproject\vendor\symfony\console\Application.php:167 { …}
+    C:\newproject\vendor\symfony\runtime\Runner\Symfony\ConsoleApplicationRunner.php:56 { …}
+    C:\newproject\vendor\autoload_runtime.php:35 { …}
+    C:\newproject\bin\console:11 { …}
+  }
+}
+2021-08-10T21:28:13+02:00 [critical] Uncaught Error: syntax error, unexpected token "as"
