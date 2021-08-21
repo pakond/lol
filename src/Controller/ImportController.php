@@ -144,7 +144,7 @@ class ImportController extends AbstractController
 		$image->setH($value['data'][$nameId]['image']['h']);
 		$champion->setImage($image);
 
-		//SKINS
+		//SKINS e
 		// foreach ($value['data'][$nameId]['skins'] as $skinValue) {
 		// 	$skin = new Skin();
 		// 	$skin->setIdnum($skinValue['id']);
