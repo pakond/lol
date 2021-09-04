@@ -77,4 +77,14 @@ class ChampionRepository extends ServiceEntityRepository
 			->getResult()
         ;
     }
+
+    public function findAllJSON(): ?Array
+    {
+        return $this->createQueryBuilder('c')
+             ->select('c.id', 'c.name', 'img.full AS image')
+             ->innerJoin('c.image', 'img')
+             ->getQuery()
+             ->getResult();
+
+    }
 }

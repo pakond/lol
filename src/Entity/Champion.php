@@ -273,4 +273,12 @@ class Champion
 
         return $this;
     }
+
+    public function toString(): string {
+
+        $dataChampion = 'Name: ' .$this->getNameid() .' Id: '.$this->getKeyid();
+        
+        return $dataChampion;
+
+    }
 }

@@ -30,6 +30,7 @@ class ImportController extends AbstractController
 	private $import;
 	private $version;
 	private $language;
+	private $imgURL = '/home/akond/lol/public/img/champions/';
 
     public function __construct(HttpClientInterface $client)
     {
@@ -143,6 +144,10 @@ class ImportController extends AbstractController
 		$image->setW($value['data'][$nameId]['image']['w']);
 		$image->setH($value['data'][$nameId]['image']['h']);
 		$champion->setImage($image);
+
+		$input = 'http://ddragon.leagueoflegends.com/cdn/'.$this->version.'/img/champion/' .$value['data'][$nameId]['image']['full'];
+		$output = $this->imgURL .$value['data'][$nameId]['image']['full'];
+		file_put_contents($output, file_get_contents($input));
 
 		//SKINS
 		// foreach ($value['data'][$nameId]['skins'] as $skinValue) {

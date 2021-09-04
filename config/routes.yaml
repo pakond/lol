@@ -5,3 +5,7 @@
 import:
     path: /import
     controller: App\Controller\ImportController::index
+
+champions:
+    path: /champions
+    controller: App\Controller\ChampionController::getChampions
