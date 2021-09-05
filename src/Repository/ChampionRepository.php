@@ -5,6 +5,8 @@ namespace App\Repository;
 use App\Entity\Champion;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use App\Entity\LanguageChampion;
+use App\Entity\Language;
 
 /**
  * @method Champion|null find($id, $lockMode = null, $lockVersion = null)
@@ -78,13 +80,30 @@ class ChampionRepository extends ServiceEntityRepository
         ;
     }
 
-    public function findAllJSON(): ?Array
+    public function findAllJSON($value1): ?Array
     {
         return $this->createQueryBuilder('c')
              ->select('c.id', 'c.name', 'img.full AS image')
              ->innerJoin('c.image', 'img')
+             //->innerJoin('LanguageChampion', 'lc', 'WITH', 'lc.champion_id = c.id')
+             //->innerJoin('Language', 'l', 'WITH', 'lc.language_id = l.id')
+             //->innerJoin('c.image', 'img')
+             //->innerJoin('c.language_champion', 'lang')
+             //->andWhere('lang.code = :val1')
+             //->setParameter('val1', $value1)
              ->getQuery()
              ->getResult();
 
     }
+
+    // public function findAllJSON($value1): ?Array
+    // {
+    //     $conn = $this->getEntityManager()
+    //     ->getConnection();
+
+    //     $query = "SELECT c.id, c.name FROM champion c INNER JOIN language_champion lc ON lc.champion_id = c.id INNER JOIN language l ON l.id = lc.language_id";
+    //     $stmt = $conn->prepare($query);
+    //     $stmt->execute(array('category' => $category->getId()));
+    //     return $stmt->fetchAll();
+    // }
 }

@@ -71,7 +71,7 @@ class ChampionController extends AbstractController
     public function getChampions(): Response {
 		$this->entityManager = $this->getDoctrine()->getManager();
 		//$champions=$this->entityManager->getRepository(Champion::class)->findAll();
-		$champions=$this->entityManager->getRepository(Champion::class)->findAllJSON();
+		$champions=$this->entityManager->getRepository(Champion::class)->findAllJSON('es_ES');
 
 
 		$arrayChampions = [];
